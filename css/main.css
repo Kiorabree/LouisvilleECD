@@ -1,0 +1,46 @@
+/************
+	Body
+*************/
+a {	color: #f3eae0;
+	text-decoration: none;
+	margin: 0 auto;
+	padding: 0 5%;	}
+
+.navigation	a	{	color: #f3eae0;
+					font-family: 'Great Vibes', cursive;
+					text-decoration: none;
+					text-align: center;	}
+
+a:visited {	color: #3a2211;	}
+a:hover {	color: #000;	}
+
+#quote	{	text-align: justify;	}
+#author	{	text-align: right;	}
+
+nav ul	{	list-style: none;
+			margin: 0 10px;
+			padding: 0;	}
+nav li	{	display: inline;	}
+
+/************
+	Header
+*************/
+header {	color: #f3eae0;
+			float: left;
+			margin: 0 0 10% 0;
+			width: 100%;
+			font-family: 'Great Vibes', cursive;
+			text-align: center;
+			font-weight: normal;	}
+
+section	{	color: #000;
+			font-family: 'Merriweather', serif;	}
+
+footer	{	font-size: 0.75em;
+			text-align: center;
+			clear: both;
+			padding-top: 50px;	}
+
+footer img	{	width: 20px;
+				height: 20px;
+				margin: 0 5px;	}
