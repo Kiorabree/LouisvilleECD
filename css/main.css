@@ -1,55 +1,53 @@
-/************
-	Body
-*************/
-a {	color: #f3eae0;
-	text-decoration: none;
-	margin: 0 auto;
-	padding: 0 5%;	}
-
-.navigation	a	{	color: #f3eae0;
-					font-family: 'Great Vibes', cursive;
-					text-decoration: none;
-					text-align: center;	}
-
-a:visited {	color: #3a2211;	}
-a:hover {	color: #000;	}
-
-#quote	{	text-align: justify;	}
-#author	{	text-align: right;	}
-
-nav ul	{	list-style: none;
-			margin: 0 10px;
-			padding: 0;	}
-nav li	{	display: inline;	}
-
-/************
-	Header
-*************/
 header {	color: #f3eae0;
-			float: left;
-			margin: 0 0 10% 0;
-			width: 100%;
-			font-family: 'Great Vibes', cursive;
-			text-align: center;
-			font-weight: 100;	}
+					float: left;
+					margin: 0 0 10% 0;
+					width: 100%;
+					font-family: 'Great Vibes', cursive;
+					text-align: center;
+					font-weight: 100; }
 
-section	{	color: #000;
-			font-family: 'Merriweather', serif;
-			margin: 0 10px;
-			padding: 0; }
+a {	text-decoration: none;
+		margin: 0 auto;
+		padding: 0 5%;	}
 
-section ul { list-style: none; }
+nav ul {	list-style: none;
+					margin: 0 10px;
+					padding: 0;	}
 
-section img { float: left;
-							width: 30%;
-							margin: 1.5%;
-						 	border-radius: 50%; }
+nav li {	display: inline;	}
 
-footer	{	font-size: 0.75em;
-			text-align: center;
-			clear: both;
-			padding-top: 50px;	}
 
-footer img	{	width: 20px;
-				height: 20px;
-				margin: 0 5px;	}
+.navigation	{	color: #3a2211;
+							font-family: 'Merriweather', serif;
+							font-size: 80%;
+							text-decoration: none;
+							text-align: center; }
+
+nav a { color: #f3eae0; }
+nav a:visited {	color: #3a2211;	}
+nav a:hover {	color: #000;	}
+
+#quote	{	text-align: justify;
+					font-size: 80%; }
+#author	{	text-align: right;
+					font-size: 55%; }
+
+body	{	color: #000;
+				font-family: 'Merriweather', serif;
+				margin: 0 10px;
+				padding: 0; }
+
+section {	text-align: center;
+					padding: 0 5px; }
+
+div ul { list-style: none; }
+
+footer {	font-size: 0.75em;
+					text-align: center;
+					clear: both;
+					padding-top: 10px;
+					padding-bottom: 50px; }
+
+footer img {	width: 20px;
+							height: 20px;
+							margin: 0 5px;	}

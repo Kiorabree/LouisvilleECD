@@ -1,48 +1,89 @@
 <!DOCTYPE html>	<html>
-	<head>
+
+<head>
 		<meta charset="utf-8">
 		<title>LouisvilleECD | Info</title>
 		<link rel="stylesheet" href="css/normalize.css">
-    	<link href='https://fonts.googleapis.com/css?family=Great+Vibes|Merriweather:400,400italic,900' rel='stylesheet' type='text/css'>
-    	<link rel="stylesheet" href="css/main.css">
-    	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-		<style>	body {	background: #a2bd4c;	}
+    <link href='https://fonts.googleapis.com/css?family=Great+Vibes|Merriweather:400,400italic,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<style>
+						header {	background: #718634;
+											background-image: url('img/ECDtop.png');
+											background-size: cover; }
+						body {	background: #a2bd4c;	}
+						.profile {	float: left;
+												width: 30%;
+												margin: 1.5%;
+												border-radius: 50%; }
+						footer {	background: #718634;
+											background-image: url('img/ECDbottom.png');
+											background-size: cover; }
+	</style>
+</head>
 
-				header {	background: #718634;	}
-		</style>
-	</head>
+<body>	<header>
+    <h1>Louisville English Country Dancers</h1>
 
-    <body>	<header>	<nav>	<ul>
-            	<li><a href="index.html">Home</a></li>
-            	<li><a href="events.html">Events</a></li>
-            	<li><a href="groups.html">Groups</a></li>
-            	<li><a href="community.html">Community</a></li>	</ul>	</nav>
+    <h2>2nd and Last Sunday of each Month</h2>
 
-                <h1>Louisville English Country Dancers</h1>
+		<nav>	<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="dancers.html">Dancers</a></li>
+			<li><a href="calendar.html">Calendar</a></li>
+			<li><a href="groups.html">Groups</a></li>	</ul>	</nav>
+	</header>
 
-                <h2>2nd and Last Sunday of each Month</h2>
-			</header>
+	<div>
+    <p id="quote">The Human Body was designed to walk, run, or stop; it wasn’t built for coasting.</p>
+    <p id="author"> - C Hightower</p>
+  </div>
 
-    		<section>
-    			<p id="quote">The Human Body was designed to walk, run, or stop; it wasn’t built for coasting.</p>
+  <section>
+<!--Countdown Timer-->
+		<p>St. Andrew's Episcopal Church</p>
+		<p>2233 Woodbourne Ave.</p>
+		<p>Louisville, KY 40205</p>	</a>
 
-                <p id="author"> - C Hightower</p>
-    		</section>
+		<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+			<div style='overflow:hidden;height:320px;width:320px;'>
+			<div id='gmap_canvas' style='height:320px;width:320px;'></div>
+			<div><small>
+			<a href="http://embedgooglemaps.com">embed google maps</a>
+				</small></div><div><small>
+			<a href="https://termsandcondiitionssample.com">terms and conditions sample</a></small></div>
+			<style>#gmap_canvas img{max-width:none!important;
+					background:none!important}</style></div>
+			<script type='text/javascript'>function init_map(){var myOptions = {zoom:13,center:new google.maps.LatLng(38.2275673,-85.68547430000001),mapTypeId: google.maps.MapTypeId.ROADMAP};
+			map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(38.2275673,-85.68547430000001)});
+			infowindow = new google.maps.InfoWindow({content:'<strong>St. Andrews Episcopal Church</strong><br>2233 Woodbourne Ave., Louisville, KY<br>'});
+			google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker); }
+			google.maps.event.addDomListener(window, 'load', init_map);
+		</script>
 
-    		<section>	<ul>
-            	<li><a href="events.html" class="navigation"><h3>Events</h3></a>	</li>
-            	<li><a href="groups.html" class="navigation"><h3>Groups</h3></a>
-                	<p>Dancers in Louisville and Beyond</p>	</li>
-            	<li><a href="info.html" class="navigation"><h3>Information</h3></a>
-                	<p>Learn About the Dances</p>	</li>
-            	<li><a href="community.html" class="navigation"><h3>Community</h3></a>
-                	<p>Personal Notes About Our Dance Community</p>	</li>	</ul>
-							<img src="img/Corsons.jpg" alt="Don &amp Kathy Corson">
-								<p class="Corson">Don &amp Kathy Corson</p>
-				</section>
-    <footer>
-			<a href="tel:1-812-246-0666"><img src="img/phone.png" alt="Phone Number"></a>
-        <a href="mailto:dancers@lousivilleecd.org"><img src="img/email.png" alt="Email Address"></a>
-    	<p>&copy; 2016 LouisvilleECD</footer>
+		<img src="img/Corsons.jpg" alt="Don &amp Kathy Corson" class="profile">
+		<p class="corson">Don &amp Kathy Corson</p>
+	</section>
+
+	<div>	<ul>
+		<li><a href="Dancers.html" class="navigation"><h3>Dancers</h3>
+			<p>Personal Notes and Information About Our Dance Community</p></a></li>
+
+		<li><a href="calendar.html" class="navigation"><h3>Calendar</h3>
+			<p>Upcoming Events for Louisville ECD</p></a></li>
+
+		<li><a href="groups.html" class="navigation"><h3>Groups</h3>
+			<p>Other Dance Groups In and Around Louisville</p></a></li>
+
+		<li><a href="jasna.html" class="navigation"><h3>Jane Austen Festival Grand Ball</h3>
+			<p>Jane Austen Society of North America's Festival and Grand Ball for the Greater Louisville Region</p></a></li></ul>
+	</div>
+
+	<footer>
+		<a href="tel:1-812-246-0666"><img src="img/phone.png" alt="Phone Number"></a>
+    <a href="mailto:dancers@lousivilleecd.org"><img src="img/email.png" alt="Email Address"></a>
+		<a href="https://www.google.com/maps/place/2233+Woodbourne+Ave,+Louisville,+KY+40205/@38.2275673,-85.687663,17z/data=!3m1!4b1!4m5!3m4!1s0x88690ca80a3f1e03:0xfcea40dde35ef4e8!8m2!3d38.2275673!4d-85.6854743"><img src="img/pin.png" alt="Google Map"></a>
+    <p>&copy; 2016 LouisvilleECD</p>
+	</footer>
 </body>
 </html>
