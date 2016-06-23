@@ -4,28 +4,35 @@ header {	color: #f3eae0;
 					width: 100%;
 					font-family: 'Great Vibes', cursive;
 					text-align: center;
-					font-weight: 100; }
+					font-weight: 90;
+					font-size: 1.1em;
+					padding-top: 18%; }
 
 a {	text-decoration: none;
 		margin: 0 auto;
-		padding: 0 5%;	}
+		padding: 0 2.5%;	}
 
 nav ul {	list-style: none;
 					margin: 0 10px;
-					padding: 0;	}
+					padding: 2px 0 0 0;	}
 
 nav li {	display: inline;	}
 
-
-.navigation	{	color: #3a2211;
-							font-family: 'Merriweather', serif;
-							font-size: 80%;
-							text-decoration: none;
-							text-align: center; }
-
-nav a { color: #f3eae0; }
+nav a { color: #f3eae0;
+				font-size: 1.25em; }
 nav a:visited {	color: #3a2211;	}
 nav a:hover {	color: #000;	}
+
+#profile {	margin: 1.5%;
+						border-radius: 50%;
+						width: 50%; }
+
+.navigation, .info	{	color: #3a2211;
+											font-family: 'Merriweather', serif;
+											font-size: 0.9em;
+											text-decoration: none;
+											text-align: center;
+											float: initial; }
 
 #quote	{	text-align: justify;
 					font-size: 80%; }
@@ -34,20 +41,56 @@ nav a:hover {	color: #000;	}
 
 body	{	color: #000;
 				font-family: 'Merriweather', serif;
-				margin: 0 10px;
+				margin: 0 5%;
 				padding: 0; }
 
-section {	text-align: center;
-					padding: 0 5px; }
-
-div ul { list-style: none; }
+div ul {	list-style: none;
+					margin: 0 5%;
+					padding: 0; }
 
 footer {	font-size: 0.75em;
 					text-align: center;
 					clear: both;
-					padding-top: 10px;
-					padding-bottom: 50px; }
+					padding-top: 15px;
+					padding-bottom: 10px; }
 
 footer img {	width: 20px;
 							height: 20px;
 							margin: 0 5px;	}
+
+/****** RESPONSIVE *******/
+@media screen and (min-width: 480px) {
+	body {	margin: 0 2.5%; }
+	header {	font-size: 1.5em;	}
+	#quote {	font-size: 100%;	}
+	#author {	font-size: 75%;	}
+
+	#map { 	margin: 0;
+	 				border: 2px solid #718634;
+					float: left; }
+
+	.info {	float: right;
+					width: 45%;
+					margin: 0 2.5%;
+					background: #718634; }
+
+	#profile {	width: 30%; }
+}
+
+@media screen and (min-width: 760px) {
+	body {	margin: 0 2.5%; }
+	header {	font-size: 2em;	}
+	h1, h3 {	text-align: left; }
+	nav {	float: right;
+				margin: 0 5% 0 0;
+				text-align: right; }
+	#quote {	font-size: 100%;	}
+	#author {	font-size: 75%;	}
+	.info {	text-indent: right; }
+	#profile {	width: 30%;
+	 						float: left; }
+	.navigation { font-size: 1em;
+								width: 45%;
+							 	padding: 2.5%;
+							 	float: left; }
+}

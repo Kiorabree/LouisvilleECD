@@ -2,20 +2,20 @@
 
 <head>
 		<meta charset="utf-8">
-		<title>LouisvilleECD | Info</title>
+		<title>LouisvilleECD | Home</title>
 		<link rel="stylesheet" href="css/normalize.css">
     <link href='https://fonts.googleapis.com/css?family=Great+Vibes|Merriweather:400,400italic,900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/main.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 	<style>
 						header {	background: #718634;
 											background-image: url('img/ECDtop.png');
-											background-size: cover; }
+											background-size: contain;
+										 	background-repeat: repeat-x; }
+
 						body {	background: #a2bd4c;	}
-						.profile {	float: left;
-												width: 30%;
-												margin: 1.5%;
-												border-radius: 50%; }
+
 						footer {	background: #718634;
 											background-image: url('img/ECDbottom.png');
 											background-size: cover; }
@@ -25,12 +25,12 @@
 <body>	<header>
     <h1>Louisville English Country Dancers</h1>
 
-    <h2>2nd and Last Sunday of each Month</h2>
+    <h3>2nd &amp Last Sunday of each Month</h3>
 
 		<nav>	<ul>
 			<li><a href="index.html">Home</a></li>
 			<li><a href="dancers.html">Dancers</a></li>
-			<li><a href="calendar.html">Calendar</a></li>
+			<li><a href="events.html">Events</a></li>
 			<li><a href="groups.html">Groups</a></li>	</ul>	</nav>
 	</header>
 
@@ -39,37 +39,36 @@
     <p id="author"> - C Hightower</p>
   </div>
 
-  <section>
+<section>
 <!--Countdown Timer-->
+
+	<div id="map">
+		<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+		<div style='overflow:hidden;height:300px;width:300px;'>
+			<div id='gmap_canvas' style='height:300px;width:300px;'></div><div><small>
+			<a href="http://googlemapsgenerator.com">embed google map</a></small></div><div><small>
+			<a href="https://termsandconditionstemplate.net">terms and conditions template</a></small></div>
+			<style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div>
+			<script type='text/javascript'>function init_map(){var myOptions = {zoom:13,center:new google.maps.LatLng(37.99787529088108,-85.40765753120617),mapTypeId: google.maps.MapTypeId.ROADMAP};
+			map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(37.99787529088108,-85.40765753120617)});infowindow = new google.maps.InfoWindow({content:'<strong>St. Andrews Episcopal Church</strong><br>2233 Woodbourne Ave., Louisville, KY<br>'});
+			google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});
+			infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+	</div>
+
+	<div class="info">
 		<p>St. Andrew's Episcopal Church</p>
 		<p>2233 Woodbourne Ave.</p>
 		<p>Louisville, KY 40205</p>	</a>
-
-		<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
-			<div style='overflow:hidden;height:320px;width:320px;'>
-			<div id='gmap_canvas' style='height:320px;width:320px;'></div>
-			<div><small>
-			<a href="http://embedgooglemaps.com">embed google maps</a>
-				</small></div><div><small>
-			<a href="https://termsandcondiitionssample.com">terms and conditions sample</a></small></div>
-			<style>#gmap_canvas img{max-width:none!important;
-					background:none!important}</style></div>
-			<script type='text/javascript'>function init_map(){var myOptions = {zoom:13,center:new google.maps.LatLng(38.2275673,-85.68547430000001),mapTypeId: google.maps.MapTypeId.ROADMAP};
-			map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(38.2275673,-85.68547430000001)});
-			infowindow = new google.maps.InfoWindow({content:'<strong>St. Andrews Episcopal Church</strong><br>2233 Woodbourne Ave., Louisville, KY<br>'});
-			google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker); }
-			google.maps.event.addDomListener(window, 'load', init_map);
-		</script>
-
-		<img src="img/Corsons.jpg" alt="Don &amp Kathy Corson" class="profile">
-		<p class="corson">Don &amp Kathy Corson</p>
-	</section>
+		<img src="img/Corsons.jpg" alt="Don &amp Kathy Corson" id="profile">
+		<p>Don &amp Kathy Corson</p>
+	</div>
+</section>
 
 	<div>	<ul>
 		<li><a href="Dancers.html" class="navigation"><h3>Dancers</h3>
 			<p>Personal Notes and Information About Our Dance Community</p></a></li>
 
-		<li><a href="calendar.html" class="navigation"><h3>Calendar</h3>
+		<li><a href="events.html" class="navigation"><h3>Events</h3>
 			<p>Upcoming Events for Louisville ECD</p></a></li>
 
 		<li><a href="groups.html" class="navigation"><h3>Groups</h3>
