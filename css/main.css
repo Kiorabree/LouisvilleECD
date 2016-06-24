@@ -43,7 +43,7 @@ footer img {	width: 20px;
 							height: 20px;
 							margin: 0 5px;	}
 
-#quote	{	text-align: justify;
+.quote	{	text-align: justify;
 					font-size: 80%; }
 #author	{	text-align: right;
 					font-size: 65%; }
@@ -64,7 +64,7 @@ div ul {	list-style: none;
 
 	nav ul { margin: 5% 5% 0; }
 
-	#quote {	font-size: 100%;	}
+	.quote {	font-size: 100%;	}
 	#author {	font-size: 75%;	}
 
 	.location {	float: right;
@@ -117,7 +117,7 @@ div ul {	list-style: none;
 
 	body {	margin: 0 2.5%; }
 
-	#quote {	font-size: 100%;
+	.quote {	font-size: 100%;
 						padding: 0 2.5% 0; }
 	#author {	font-size: 100%;
 						padding: 0 2.5% 0; }
