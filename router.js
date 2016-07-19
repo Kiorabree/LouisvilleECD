@@ -1,9 +1,10 @@
 var Profile = require("./profile.js");
+var renderer = require("./renderer.js");
 
 function homeRoute(request, response) {
   if(request.url === "/") {
     response.writeHead(200, {"Content-Type" : "text/plain"});
-    response.write("Header\n");
+    renderer.view("header", {}, response);
     response.write("Search\n");
     response.end("Footer\n");
 }
@@ -19,8 +20,7 @@ function userRoute(request, response) {
 
     dancerProfile.on("end", function(ECDprofile){
       var values = {
-        avatarUrl: ...,
-        username: ...,
+        username: profileJSON.gravatar_url
       }
 
       response.write(values.username + "\n");
