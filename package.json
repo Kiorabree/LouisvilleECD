@@ -1,0 +1,22 @@
+{
+  "name": "louisvilleecd",
+  "version": "1.0.0",
+  "description": "This project will, hopefully, not only replace the current Louisville English Country Dance website, but...   1. Will make the site more responsive on other devices   2. Allow dancers to sign-in to see and share information with other dancers",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kiorabree/LouisvilleECD.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kiorabree/LouisvilleECD/issues"
+  },
+  "homepage": "https://github.com/Kiorabree/LouisvilleECD#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
