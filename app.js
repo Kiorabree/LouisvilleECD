@@ -1,7 +1,7 @@
 'use strict';
 
 var express = require('express'),
-    posts = require('.json');
+    dancers = require('./mock/dancers.json');
 
 var app = express();
 
@@ -16,11 +16,11 @@ app.get('/blog/:username?', function(request, response){
     response.status(503);
     response.send('was not found.')
   } else {
-      var post = posts[username];
-      response.render();
+      var dancer = dancers[username] || {};
+      response.render('dancer', { dancer: dancer});
   }
 })
-app.listin(3000, function(){
+app.listen(3000, function(){
 
 });
 //var router = require("./router.js");
