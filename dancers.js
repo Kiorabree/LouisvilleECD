@@ -1,41 +1,23 @@
-'use strict'
+angular.module("dancersApp", [])
 
-angular.module("dancersList", [])
+  .controller('dancersList', function ($scope, dataService) {
+    $scope.addDancer = function() {
+      var dancer = {name: " "};
+      $scope.dancers.push(dancer);
+    };
 
-.controller('mainCtrl', function($scope, dataService) {
-  $scope.addDancer = function() {
-    var dancer = [  {first: "First Name", last: "Last Name", username: "username", email: "email" } ];
-  };
+    dataService.getDancers(function(response) {
+      console.log(response.data);
+      return response.data;
+      $scope.dancers = response.data;
+    });
 
-  $scope.helloWorld = dataService.helloWorld;
+  })
+  .service('dataService', function($http) {
+    this.checkService = function () {
+      console.log("Checking the service?");
+    };
 
-  dataService.getDancers(function(response) {
-    console.log(response.data);
-    $scope.dancers = response.data;
+    this.getDancers = function(callback) { $http.get('mock/dancers.json').then(callback)
+    }
   });
-
-  $scope.deleteDancer = function(dancer, $index) {
-    dataService.deleteDancer(dancer);
-    $scope.dancers.splice($index, 1);
-  };
-
-  $scope.saveDancer = function(dancer) {
-    dataService.saveDancer(dancer);
-  };
-})
-
-.service('dataService', function($http) {
-  this.helloWorld = function() {
-    console.log("Brrrrr");
-  };
-  this.getDancers = function(callback) {
-    $http.get('mock/dancers.json')
-    .then(callback)
-  };
-  this.deleteDancer = function(dancer) {
-    console.log("Dancer" + dancer.username + "had been deleted")
-  };
-  this.saveDancer = function(dancer) {
-    console.log("Dancer" + dancer.username + "had been added")
-  };
-});
