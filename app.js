@@ -5,8 +5,10 @@ var express = require('express'),
 
 var app = express();
 
+app.set('views', './templates');
+
 app.get('/', function(request, response){
-  response.send()
+  response.render('index.html')
 });
 app.get('/blog/:username?', function(request, response){
   var username = request.params.username;
@@ -15,7 +17,7 @@ app.get('/blog/:username?', function(request, response){
     response.send('was not found.')
   } else {
       var post = posts[username];
-      response.send(post);
+      response.render();
   }
 })
 app.listin(3000, function(){
