@@ -1,41 +1,27 @@
-'use strict';
+'use strict'
 
-var express = require('express'),
-    dancers = require('./mock/dancers.json');
+angular.module("dancersList", [])
 
-var app = express();
+.controller('mainCtrl', function($scope, dataService) {
+    $scope.addDancer = function() {
+      var dancer = {firstname: "name"};
+      $scope.dancer.push(dancer);
+    };
 
-app.set('views', './templates');
+    dataService.getDancers(function(response) {
+      console.log(response.data);
+      $scope.dancers = response.data;
+    });
 
-app.get('/', function(request, response){
-  response.render('index.html')
-});
-app.get('/blog/:username?', function(request, response){
-  var username = request.params.username;
-  if  (username === undefined) {
-    response.status(503);
-    response.send('was not found.')
-  } else {
-      var dancer = dancers[username] || {};
-      response.render('dancer', { dancer: dancer});
-  }
 })
-app.listen(3000, function(){
 
+.service('dataService', function ($http) {
+
+  this.getDancers = function(callback) {
+    $http.get('mock/dancers.json')
+    .then(callback)
+  };
+  this.saveDancers = function(dancer) {
+    console.log(dancer.username + "'s info was saved")
+  };
 });
-//var router = require("./router.js");
-
-//var http = require("http");
-//http.createServer(function (request, response) {
-//  router.home(request, response);
-//  router.user(request, response);
-//}).listen(3000);
-//console.log('Server running at http//<LouisvilleECD-url/');
-
-//function printMessage(username) {
-//  var message = "Welcome, " + username + ". Let's dance!";
-//  console.log(message); }
-
-//var request = http.get("")
-
-//printMessage("Kiorabree");

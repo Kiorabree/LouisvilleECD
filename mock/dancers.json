@@ -1,6 +1,6 @@
-{
-  "MaryH": {  "firstname": "Mary",
-              "lastname": "Harper",
-              "username": "MaryH",
-              "email": "mharper@bellarmine.edu" }
-}
+[
+  { "first": "Mary",
+    "last": "Harper",
+    "username": "MJHarper",
+    "email":  "mharper@bellarmine.edu"  }
+  ]
