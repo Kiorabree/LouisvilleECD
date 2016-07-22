@@ -3,7 +3,7 @@ angular.module("dancersApp", [])
   .controller('dancersList', function ($scope, dataService) {
     $scope.addDancer = function() {
       $scope.dancers.push(this.dancer);
-      
+      this.http.post('http://localhost:3000', JSON.stringify({'first': '1', 'last': '2', 'email': '3'}).{dancers: dancers});
 
     };
 
