@@ -8,10 +8,10 @@ var dancers = require('mock/dancers.json');
 
 var app = express();
 
-app.use('/', express.static("workfiles"));
+app.use('/', express.static("/workfiles"));
 app.use(parser.json());
 
-mongoose.connect('mongodb://localhost/dancers.js');
+mongoose.connect('mongodb://localhost/dancers');
 
 var Schema = new mongoose.Schema;
 var dancerSchema = new Schema({
@@ -22,24 +22,29 @@ var dancerSchema = new Schema({
 
 var Dancer = mongoose.model('Dancer', dancerSchema);
 
-app.get('/', function(request, response){
-response.render('index.html')
-});
-app.get('/dancers/:email', function(request, response){
-  var email = request.params.email;
-  if  (email === undefined) {
-response.status(503);
-response.send('Contact was not found.')
-} else {
-  var email = dancers[email];
-response.render();
-}
+app.get('/dancers', function(request, response) { Dancer.find(function(err, dancers) {
+  if (err)
+    response.send(err)
+  response.json(dancers)
+  });
 });
 
-app.post('/dancers', function (request, response) {
-  var dancer = request.body;
-  Dancer.save(dancer, function(err, dancer) {
+app.post('/dancers', function(request, response) {
+  Dancers.create( {
+    first: req.body.first, last: req.body.last, email: req.body.email }, function(err, dancers) { if (err)
+      response.send(err);
+
+  Dancer.find(function(err, dancers) {
+    if (err)
+      response.send(err)
+    response.json(dancers);
+    });
+  });
 });
 
-app.listen(3000, function() {
+app.listen(3000);
+console.log("Listening on port 3000");
+
+app.get('/', function(request, response) {
+  response.sendfile('/workfiles/dancers.html');
 });
