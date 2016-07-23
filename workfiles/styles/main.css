@@ -1,0 +1,146 @@
+body	{	color: #3a2211;
+				font-family: 'Merriweather', serif;
+				text-decoration: none;
+				text-align: center;
+				margin: 0 5%;
+				padding: 0;
+				float: none; }
+
+header {	color: #f3eae0;
+					float: left;
+					margin: 0 0 10% 0;
+					width: 100%;
+					font-family: 'Great Vibes', cursive;
+					text-align: center;
+					font-weight: 90;
+					font-size: 1.1em;
+					padding-top: 20%; }
+
+h1, h3 {	margin: 0;
+					padding: 2.5% 0; }
+
+a {	text-decoration: none;
+		margin: 0 auto;
+		padding: 0 2.5%;
+		color: #f3eae0;
+		font-size: 1.25em; }
+
+nav ul {	list-style: none;
+					margin: 5% 2% 0;
+					padding: 0;	}
+
+nav li {	display: inline;	}
+nav a:visited {	color: #3a2211;	}
+nav a:hover {	color: #000;	}
+
+footer {	font-size: 0.75em;
+					text-align: center;
+					clear: both;
+					padding-top: 15px;
+					padding-bottom: 10px; }
+
+footer img {	width: 20px;
+							height: 20px;
+							margin: 0 5px;	}
+
+.quote	{	text-align: justify;
+					font-size: 80%; }
+#author	{	text-align: right;
+					font-size: 65%; }
+
+div ul {	list-style: none;
+					margin: 0 5%;
+					padding: 0; }
+
+/****** RESPONSIVE *******/
+@media screen and (min-width: 480px) {
+	header {	font-size: 150%;
+	 					padding-top: 19%; }
+
+	h1, h3 {	margin: 0;
+						padding: 1.5% 0; }
+
+	body {	margin: 0 1%; }
+
+	nav ul { margin: 5% 5% 0; }
+
+	.quote {	font-size: 100%;	}
+	#author {	font-size: 75%;	}
+
+	.location {	float: right;
+							width: 300px;
+							height: 400px;
+							margin: 0 1%;
+						 	padding: 0; }
+
+	.contact {	float: left;
+							font-size: 80%;
+							width: 45%;
+							height: 400px;
+							margin: 0 1%;
+							padding: 0;
+							background: #718634;
+						 	border-top: 2px solid #3a2211; }
+	#info {	padding: 0;
+					margin: 5% 0; }
+	#profile {	width: 30%; }
+}
+
+@media screen and (min-width: 760px) {
+	body {	padding: 0; }
+
+	header {	font-size: 1.8em;
+						background-size: 100%;
+						padding: 12% 0 0 0;
+						margin: 0; }
+
+	h1 {	float: left;
+				text-align: left;
+				max-width: 75%;
+				padding: 0 2.5%;
+				margin:  0; }
+
+	h3 {	float: left;
+				text-align: left;
+				padding: 0 5%;
+				margin: 0; }
+
+	nav ul { 	padding: 0;
+						margin: 0; }
+
+	nav li {	font-size: 75%;
+	 					display: list-item;
+						flex-flow: column;
+						text-align: right;
+						margin: 0;
+						padding: 0; }
+
+	body {	margin: 0 2.5%; }
+
+	.quote {	font-size: 100%;
+						padding: 0 2.5% 0; }
+	#author {	font-size: 100%;
+						padding: 0 2.5% 0; }
+
+	#info {	width: 300px;
+					float:right;
+					background: #718634;
+					padding: 0 2.5% 0;
+					margin: 0; }
+
+	.location,
+	.contact {	border: initial;
+							height: auto;
+							width: auto;
+							margin: 0;
+						 	padding: 0; }
+
+	#navigation li { 	font-size: 125%;
+										display: list-item;
+										flex-flow: column;
+										text-align: left;
+										width: 50%;
+										min-width: 300px;
+							 			padding: 5px;
+							 			float: left;  }
+}

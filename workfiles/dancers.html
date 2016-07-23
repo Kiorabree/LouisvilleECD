@@ -5,7 +5,7 @@
 		<title>LouisvilleECD | Dancers</title>
 		<link rel="stylesheet" href="../css/normalize.css">
     <link href='https://fonts.googleapis.com/css?family=Great+Vibes|Merriweather:400,400italic,900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="../css/main.css">
+    <link href='styles/main.css' rel="stylesheet" style="text/css">
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 	<style>
 						header {	background: #5a7574	;
@@ -46,37 +46,46 @@
 
 <body>
 
-	<header>
+  <script src="vendor/angular.js" type="text/javascript"></script>
+  <script src="scripts/app.js" type="text/javascript"></script>
+
+  <header>
     <h1>Louisville English Country Dancers</h1>
 
     <h3>Dancers &amp the Dancing Community</h3>
 
-		<nav>	<ul>
-			<li><a href="index.html">Home</a></li>
-			<li><a href="dancers.html">Dancers</a></li>
-			<li><a href="events.html">Events</a></li>
-			<li><a href="groups.html">Groups</a></li>	</ul>	</nav>
-	</header>
+    <nav>	<ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="dancers.html">Dancers</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="groups.html">Groups</a></li>	</ul>	</nav>
+  </header>
 
-	<div>
+  <div>
     <p class="quote">Life is not a journey of coasting to the grave with the intention of arriving in a pretty and well preserved body, but rather to skid in sideways thoroughly used up, totally worn out and proclaiming 'WOW, WHAT A RIDE!!!'</p>
     <p id="author"> - Hunter S. Thompson</p>
   </div>
 
-	<div ng-app="dancersApp" ng-controller="dancersList">
-	<form action="/" method="POST">
-	    <input ng-model="dancer.first" type="text" placeholder="First Name">
-	    <input ng-model="dancer.last" type="text" placeholder="Last Name">
-	    <input ng-model="dancer.email" type="text" placeholder="E-mail">
-	    <input ng-click="addDancer()" type="submit" value="Submit" class="button">
-	</form>
+  <div ng-app="dancersApp">
 
-		<div ng-repeat="dancer in dancers">
-		
-		</div>
+    <form action="/" method="POST">
+        <input type="text" placeholder="First Name">
+        <label>First Name</label>
+        <input type="text" placeholder="Last Name">
+        <label>Last Name</label>
+        <input type="text" placeholder="E-mail">
+        <label>E-mail</label>
+    </form>
 
-	</div>
-	<footer>
+    <div ng-controller="dancersList">
+      <a href="">Edit</a>
+      <a href="" ng-click-="helloWorld()">Save</a>
+      <a href="">Delete</a>
+    </div>
+
+  </div>
+
+  <footer>
 		<a href="tel:1-812-246-0666"><img src="../img/phone.png" alt="Phone Number"></a>
     <a href="mailto:dancers@lousivilleecd.org"><img src="../img/email.png" alt="Email Address"></a>
 		<a hreg="https://www.facebook.com/Louisville-English-Country-Dancers-114054155298936/"><img src="../img/facebook.png" alt="Facebook Page"></a>
@@ -84,9 +93,6 @@
     <p>&copy; 2016 LouisvilleECD</p>
 	</footer>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-
-  <script src="../dancers.js" type="text/javascript"></script>
-
+  <script src="scripts/app.js" type="text/javascript"></script>
 </body>
 </html>
